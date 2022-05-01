@@ -54,6 +54,7 @@ call plug#end()
 
 
 " OTHER BASE SETTINGS:
+syntax on
 set nowritebackup                       " take off backups.
 set nobackup
 
@@ -85,12 +86,19 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 "
 " MAPING KEY
 "=== === === === === === === === === === === === === === === === === === ===
+"=== === === === === === === === === === === === === === === === === === ===
+"=== === === === === === === === === === === === === === === === === === ===
 "=== === NORDTree
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 "
+"=== === Python Shotcuts.
+nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>     " execute cur. buffer.
+"=== === === === === === === === === === === === === === === === === === ===
+"=== === === === === === === === === === === === === === === === === === ===
+"=== === === === === === === === === === === === === === === === === === ===
 "
 "
 "
