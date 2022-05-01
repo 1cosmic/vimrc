@@ -19,6 +19,8 @@ call plug#begin('~/.vim/plugged')
 " Good Dops.
 Plug 'scrooloose/nerdtree'              " NERDTree.
 Plug 'liuchengxu/vista.vim'             " Review of classes, funcs & others.
+Plug 'lokaltog/vim-powerline'           " PowerLine!
+
 
 " Color Schemes.
 Plug '/morhetz/gruvbox'
@@ -81,8 +83,13 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 "
 "
 "
-"
-"
+" MAPING KEY
+"=== === === === === === === === === === === === === === === === === === ===
+"=== === NORDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-t> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 "
 "
 "
