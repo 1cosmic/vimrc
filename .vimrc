@@ -19,8 +19,9 @@ call plug#begin('~/.vim/plugged')
 " Good Dops.
 Plug 'scrooloose/nerdtree'              " NERDTree.
 Plug 'liuchengxu/vista.vim'             " Review of classes, funcs & others.
-Plug 'lokaltog/vim-powerline'           " PowerLine!
-
+Plug 'vim-airline/vim-airline'          " Airline.
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }   " where is my file???
+Plug 'junegunn/fzf.vim'                 " FZF
 
 " Color Schemes.
 Plug '/morhetz/gruvbox'
@@ -58,13 +59,16 @@ syntax on
 set nowritebackup                       " take off backups.
 set nobackup
 
-set cmdheight=2                         " CMD Heinght 2 line.
+set cmdheight=2                         " CMD Heinght 1 line.
 set encoding=utf-8                      " encoding of utf-8.
 set number                              " show line numbers.
 
 " INDENT (FOR PYTHON)
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
+" BEAUTY:
+colorscheme PaperColor
+set background=dark
 
 " === === === === === ===
 " === === === === === ===
@@ -110,3 +114,34 @@ let g:ale_fixers = {'python': ['isort', 'yapf', 'remove_trailing_lines', 'trim_w
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_completion_enabled = 0       " off autocomplete.
+
+" POWERLINE BEAUTY.
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+ let g:airline_symbols = {}
+ endif
+
+ " unicode symbols
+ let g:airline_left_sep = '»'
+ let g:airline_left_sep = '▶'
+ let g:airline_right_sep = '«'
+ let g:airline_right_sep = '◀'
+ let g:airline_symbols.linenr = '␊'
+ let g:airline_symbols.linenr = '␤'
+ let g:airline_symbols.linenr = '¶'
+ let g:airline_symbols.branch = '⎇'
+ let g:airline_symbols.paste = 'ρ'
+ let g:airline_symbols.paste = 'Þ'
+ let g:airline_symbols.paste = '∥'
+ let g:airline_symbols.whitespace = 'Ξ'
+
+ " airline symbols
+ let g:airline_left_sep = ''
+ let g:airline_left_alt_sep = ''
+ let g:airline_right_sep = ''
+ let g:airline_right_alt_sep = ''
+ let g:airline_symbols.branch = ''
+ let g:airline_symbols.readonly = ''
+ let g:airline_symbols.linenr = ''
+
