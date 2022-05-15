@@ -37,6 +37,7 @@ Plug '/altercation/vim-colors-solarized'
 Plug 'tpope/vim-commentary'             " Comments lines with gcc / gc (Visual).
 Plug 'jeetsukumaran/vim-pythonsense'    " PYTHON: supports to Python-text-object.
 Plug 'Vimjas/vim-python-pep8-indent'    " PYTHON: automatic add indent in code.
+Plug 'jiangmiao/auto-pairs'             " C++: autopairs.
 
 " Code hacks.
 Plug 'dense-analysis/ale'               " Asynchronous Lint Engine
