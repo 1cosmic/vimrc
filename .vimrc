@@ -89,25 +89,24 @@ set background=dark
 "
 "
 "
-" MAPING KEY
+" MAPING KEY & SETTINGS FOR PLUGIN.
 "=== === === === === === === === === === === === === === === === === === ===
 "=== === === === === === === === === === === === === === === === === === ===
 "=== === === === === === === === === === === === === === === === === === ===
 "=== === NORDTree
 nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-t> :NERDTree<CR>
+nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+
+" Start NERDTree and put the cursor back in the other window.
+autocmd VimEnter * NERDTree | wincmd p
+"=== === === === === === === === === === === === === === === === === === ===
+"=== === === === === === === === === === === === === === === === === === ===
+"=== === === === === === === === === === === === === === === === === === ===
 "
 "=== === Python Shotcuts.
 nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>     " execute cur. buffer.
-"=== === === === === === === === === === === === === === === === === === ===
-"=== === === === === === === === === === === === === === === === === === ===
-"=== === === === === === === === === === === === === === === === === === ===
-"
-"
-"
-"
 "
 " ALE.
 let g:ale_linters = {'python': 'all'}  " Python lint enable.
