@@ -21,17 +21,22 @@ Plug 'scrooloose/nerdtree'              " NERDTree.
 Plug 'liuchengxu/vista.vim'             " Review of classes, funcs & others.
 Plug 'vim-airline/vim-airline'          " Airline.
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }   " where is my file???
-Plug 'junegunn/fzf.vim'                 " FZF
+Plug 'junegunn/fzf.vim'                 " FZF.
+Plug 'puremourning/vimspector'          " DEBUGGER.
+
+Plug 'prabirshrestha/vim-lsp'           " LSP.
+Plug 'mattn/vim-lsp-settings'           " LSP: autosettings.
 
 " Color Schemes.
-Plug '/morhetz/gruvbox'
-Plug '/sainnhe/sonokai'
-Plug '/fcpg/vim-fahrenheit'
+Plug 'morhetz/gruvbox'
+Plug 'sainnhe/sonokai'
+Plug 'fcpg/vim-fahrenheit'
+Plug 'kyoz/purify', { 'rtp': 'vim' }
 Plug 'srcery-colors/srcery-vim'
 Plug 'pineapplegiant/spaceduck'
-Plug '/sainnhe/gruvbox-material'
+Plug 'sainnhe/gruvbox-material'
 Plug 'nlknguyen/papercolor-theme'
-Plug '/altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 
 " Code editing.
 Plug 'tpope/vim-commentary'             " Comments lines with gcc / gc (Visual).
@@ -46,7 +51,7 @@ Plug 'davidhalter/jedi-vim'             " add autocompletion to Python.
 " Autocomplete:
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'pappasam/coc-jedi'                
-Plug 'ycm-core/YouCompleteMe'           " YCM BROO!!!
+" Plug 'ycm-core/YouCompleteMe'           " YCM BROO!!!
 
 call plug#end()
 
@@ -68,7 +73,7 @@ set number                              " show line numbers.
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " BEAUTY:
-colorscheme PaperColor
+colorscheme srcery
 set background=dark
 
 " === === === === === ===
@@ -145,3 +150,10 @@ if !exists('g:airline_symbols')
  let g:airline_symbols.readonly = ''
  let g:airline_symbols.linenr = ''
 
+
+" COC-NVIM.
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" VimSpector
+let g:vimspector_enable_mappings = 'HUMAN'
