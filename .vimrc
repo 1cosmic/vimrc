@@ -70,7 +70,7 @@ set encoding=utf-8                      " encoding of utf-8.
 set number                              " show line numbers.
 
 " INDENT (FOR PYTHON)
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " BEAUTY:
 colorscheme srcery
@@ -81,6 +81,7 @@ set background=dark
 " === === === === === ===
 
 
+imap jk <Esc>
 
 
 
